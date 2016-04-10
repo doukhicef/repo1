@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         WebView texte = (WebView) findViewById(R.id.webview);
-        texte.loadUrl("file:///android_asset/page5.html");
+        texte.loadUrl("file:///android_asset/page6.html");
         texte.requestFocus();
     }
 
