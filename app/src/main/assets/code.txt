@@ -1,0 +1,62 @@
+
+        /*
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.setDrawerListener(toggle);
+        toggle.syncState();
+
+
+        <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="@dimen/fab_margin"
+                android:src="@android:drawable/ic_menu_directions" />
+        */
+
+        @Override
+            public boolean onCreateOptionsMenu(Menu menu) {.
+                getMenuInflater().inflate(R.menu.main, menu);
+                return true;
+            }
+
+            @Override
+            public boolean onOptionsItemSelected(MenuItem item) {
+                int id = item.getItemId();
+                if (id == R.id.action_settings) {
+                    return true;
+                }
+                return super.onOptionsItemSelected(item);
+            }
+
+
+
+
+       , OnGesturePerformedListener
+
+       private GestureLibrary gestureLib;
+
+
+       GestureOverlayView gestureOverlayView = new GestureOverlayView(this);
+               View inflate = getLayoutInflater().inflate(R.layout.activity_main, null);
+               gestureOverlayView.addView(inflate);
+               gestureOverlayView.addOnGesturePerformedListener(this);
+               gestureLib = GestureLibraries.fromRawResource(this, R.raw.gestures);
+               if (!gestureLib.load()) {
+                   finish();
+               }
+               setContentView(gestureOverlayView);
+
+
+               @Override
+                   public void onGesturePerformed(GestureOverlayView overlay, Gesture gesture) {
+                       ArrayList<Prediction> predictions = gestureLib.recognize(gesture);
+                       for (Prediction prediction : predictions) {
+                           if (prediction.score > 1.0) {
+                               Toast.makeText(this, prediction.name, Toast.LENGTH_SHORT)
+                                       .show();
+                           }
+                       }
+                   }
