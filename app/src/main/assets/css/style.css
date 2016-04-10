@@ -1,0 +1,39 @@
+@font-face {
+    font-family: arabic;
+    src: url("file:///android_asset/fonts/arabic.ttf")
+}
+
+body
+{
+    font-family: arabic;
+    font-size: 20px;
+    margin: 0;
+    text-align: right;
+    direction: rtl;
+    padding: 15px;
+}
+
+.titre
+{
+    color: blue;
+}
+
+.ref
+{
+    color: green;
+}
+
+.numlist
+{
+    color: purple;
+}
+
+.ayat
+{
+    color: red;
+}
+
+.ahadith
+{
+    color: coral;
+}

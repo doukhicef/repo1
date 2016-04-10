@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/page1"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="مقدمة" />
+        <item
+            android:id="@+id/page2"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="تعريف ببعض المصطلحات" />
+        <item
+            android:id="@+id/page3"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="معنى العقيدة لغة" />
+        <item
+            android:id="@+id/page4"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="معنى العقيدة اصطلاحا" />
+        <item
+            android:id="@+id/page"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="" />
+
+    </group>
+
+
+</menu>
