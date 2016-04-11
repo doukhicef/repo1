@@ -4,10 +4,10 @@ import java.util.List;
 import java.util.Vector;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 
 public class swipe extends AppCompatActivity {
 
@@ -33,6 +33,30 @@ public class swipe extends AppCompatActivity {
         this.pager = (ViewPager) super.findViewById(R.id.viewpager);
         this.pager.setAdapter(this.mPagerAdapter);
 
-    }
 
+        pager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+                if (position == pager.getCurrentItem()) {
+                    //Log.e("going Right", "going Right");
+                } else {
+                    //Log.e("going left", "going left");
+                }
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                //Log.e("Select",String.valueOf(position));
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+                //Log.e("Select Scroll","Select Scroll");
+            }
+
+        });
+
+    }
 }
