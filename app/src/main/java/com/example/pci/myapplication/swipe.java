@@ -23,7 +23,7 @@ public class swipe extends AppCompatActivity {
         List pagelist = new Vector();
 
         int nbrpage = getResources().getInteger(R.integer.nbrpage);
-        for(int i=1;i<=nbrpage;i++) {
+        for(int i=nbrpage;i>=1;i--) {
             Fragment frag = com.example.pci.myapplication.frag.newInstance(i);
             pagelist.add(frag);
         }
@@ -32,6 +32,7 @@ public class swipe extends AppCompatActivity {
         this.mPagerAdapter = new MyPagerAdapter(super.getSupportFragmentManager(), pagelist);
         this.pager = (ViewPager) super.findViewById(R.id.viewpager);
         this.pager.setAdapter(this.mPagerAdapter);
+        this.pager.setCurrentItem(nbrpage-1);
 
 
         pager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {

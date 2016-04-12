@@ -60,3 +60,15 @@
                            }
                        }
                    }
+
+
+
+       <span class="numlist"></span>
+
+       <span class="titre"></span>
+
+       <span class="ref"></span>
+
+       <span class="ayat"></span>
+
+       <span class="ahadith"></span>
