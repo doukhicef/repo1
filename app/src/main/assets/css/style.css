@@ -1,36 +1,52 @@
 @font-face {
     font-family: arabic;
-    src: url("file:///android_asset/fonts/arabic.ttf")
+    src: url("file:///android_asset/fonts/font2.ttf");
 }
 
 body
 {
     font-family: arabic;
-    font-size: 20px;
-    margin: 0;
-    text-align: right;
+    font-size: 30px;
+    text-align: justify;
     direction: rtl;
-    padding: 15px;
+    color: #303F9F;
+    background-color: #FAFAFA;
+
+
+}
+
+p
+{
+    margin: 0px;
 }
 
 .titre
 {
-    color: blue;
+    color: #2E7D32;
+    text-align: center;
+    font-size: 35   px;
+    font-weight: bold;
 }
 
 .ref
 {
     color: green;
+    font-weight: bold;
+    font-size: 25px;
 }
 
 .numlist
 {
     color: purple;
+    font-weight: bold;
 }
 
 .ayat
 {
     color: red;
+    font-family: arabic;
+    src: url("file:///android_asset/fonts/arabic.ttf");
+
 }
 
 .ahadith

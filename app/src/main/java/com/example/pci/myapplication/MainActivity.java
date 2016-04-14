@@ -7,11 +7,9 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.webkit.WebView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
 
 
     @Override
@@ -22,9 +20,6 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        WebView texte = (WebView) findViewById(R.id.webview);
-        texte.loadUrl("file:///android_asset/page6.html");
-        texte.requestFocus();
     }
 
     @Override
