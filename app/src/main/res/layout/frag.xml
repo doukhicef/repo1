@@ -8,5 +8,10 @@
         android:id="@+id/page"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layoutDirection="rtl"/>
+        android:layoutDirection="rtl" />
+    <ImageView
+        android:id="@+id/loadingimg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
 </RelativeLayout>

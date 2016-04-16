@@ -40,10 +40,13 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.page1) {
 
             Intent secondeActivite = new Intent(MainActivity.this, swipe.class);
+            secondeActivite.putExtra("page", 1);
             startActivity(secondeActivite);
 
         } else if (id == R.id.page2) {
-
+            Intent secondeActivite = new Intent(MainActivity.this, swipe.class);
+            secondeActivite.putExtra("page", 5);
+            startActivity(secondeActivite);
         } else if (id == R.id.page3) {
 
         } else if (id == R.id.page4) {

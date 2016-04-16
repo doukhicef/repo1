@@ -2,12 +2,18 @@ package com.example.pci.myapplication;
 
 import java.util.List;
 import java.util.Vector;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.widget.Toast;
 
 public class swipe extends AppCompatActivity {
 
@@ -19,7 +25,6 @@ public class swipe extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         super.setContentView(R.layout.swipe);
 
-
         List pagelist = new Vector();
 
         int nbrpage = getResources().getInteger(R.integer.nbrpage);
@@ -28,12 +33,13 @@ public class swipe extends AppCompatActivity {
             pagelist.add(frag);
         }
 
-
         this.mPagerAdapter = new MyPagerAdapter(super.getSupportFragmentManager(), pagelist);
         this.pager = (ViewPager) super.findViewById(R.id.viewpager);
         this.pager.setAdapter(this.mPagerAdapter);
-        this.pager.setCurrentItem(nbrpage-1);
 
+        Intent i = getIntent();
+        int page = i.getIntExtra("page", 1);
+        this.pager.setCurrentItem(nbrpage-page);
 
         pager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -60,4 +66,30 @@ public class swipe extends AppCompatActivity {
         });
 
     }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        //Création d'un MenuInflater qui va permettre d'instancier un Menu XML en un objet Menu
+        MenuInflater inflater = getMenuInflater();
+        //Instanciation du menu XML spécifier en un objet Menu
+        inflater.inflate(R.menu.menu, menu);
+
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    //Méthode qui se déclenchera au clic sur un item
+    public boolean onOptionsItemSelected(MenuItem item) {
+        //On regarde quel item a été cliqué grâce à son id et on déclenche une action
+        switch (item.getItemId()) {
+            case R.id.option:
+
+                Toast.makeText(swipe.this, String.valueOf(this.pager.getCurrentItem()), Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.quitter:
+                Toast.makeText(swipe.this, "Quitter", Toast.LENGTH_SHORT).show();
+                return true;
+        }
+        return false;
+    }
+
 }

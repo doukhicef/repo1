@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/option"
+        android:title="حفظ علامة"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_marque">
+    </item>
+
+    <item
+        android:id="@+id/quitter"
+        android:title="Quitter"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="100"
+        android:icon="@android:drawable/ic_menu_close_clear_cancel" />
+</menu>
+	
