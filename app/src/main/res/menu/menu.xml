@@ -2,11 +2,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/partage"
+        android:title="حفظ علامة"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_partage">
+    </item>
+
+    <item
         android:id="@+id/option"
         android:title="حفظ علامة"
         app:showAsAction="ifRoom"
         android:orderInCategory="100"
-        android:icon="@drawable/ic_marque">
+        android:icon="@drawable/ic_marque_0">
     </item>
 
     <item
@@ -14,6 +22,6 @@
         android:title="Quitter"
         app:showAsAction="ifRoom"
         android:orderInCategory="100"
-        android:icon="@android:drawable/ic_menu_close_clear_cancel" />
+        android:icon="@drawable/ic_menu" />
 </menu>
 	
